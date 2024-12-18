@@ -1,0 +1,6 @@
+pygetwindow
+pyautogui
+pywin32
+pynput
+npm
+python-dotenv

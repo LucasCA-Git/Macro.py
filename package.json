@@ -1,0 +1,21 @@
+{
+  "name": "automation-helper",
+  "version": "1.0.0",
+  "description": "Assistente de Automação de Tarefas no Windows",
+  "main": "main.py",
+  "scripts": {
+    "start": "python src/main.py",
+    "clear-temp": "python src/automation/clear_temp.py",
+    "backup-cleaner": "python src/automation/backup_cleaner.py",
+    "send-email": "python src/automation/email_service.py",
+    "install-basics": "python src/automation/install_basics.py"
+  },
+  "keywords": [
+    "automation",
+    "windows",
+    "task-helper",
+    "cleanup"
+  ],
+  "author": "Lucas Alecrim",
+  "license": "MIT"
+}
