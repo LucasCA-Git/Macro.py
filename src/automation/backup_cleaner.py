@@ -51,6 +51,19 @@ def fazer_backup(origem, destino):
                 logging.error(f"Erro ao copiar '{origem_item}': {e}")
                 return False
 
+        # Exclui os arquivos do diretório de origem após o backup
+        for item in os.listdir(origem):
+            origem_item = os.path.join(origem, item)
+            try:
+                if os.path.isdir(origem_item):
+                    shutil.rmtree(origem_item)  # Remove diretórios
+                    logging.info(f"Diretório '{origem_item}' removido.")
+                else:
+                    os.remove(origem_item)  # Remove arquivos
+                    logging.info(f"Arquivo '{origem_item}' removido.")
+            except Exception as e:
+                logging.error(f"Erro ao remover '{origem_item}': {e}")
+
         logging.info(f"Backup de '{origem}' para '{destino}' concluído com sucesso.")
         return True
 
