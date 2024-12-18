@@ -1,0 +1,119 @@
+{
+    "project": {
+      "name": "Automation Helper",
+      "description": "A tool to automate various tasks on Windows, including file cleanup, backup, email logs, and essential program installation.",
+      "repository": "https://github.com/LucasCA-Git/automation-helper",
+      "license": "MIT",
+      "badges": {
+        "license": "https://img.shields.io/github/license/LucasCA-Git/automation-helper",
+        "issues": "https://img.shields.io/github/issues/LucasCA-Git/automation-helper",
+        "stars": "https://img.shields.io/github/stars/LucasCA-Git/automation-helper?style=social",
+        "forks": "https://img.shields.io/github/forks/LucasCA-Git/automation-helper?style=social"
+      },
+      "technologies": [
+        "Python 3.9+",
+        "PyAutoGUI",
+        "PyGetWindow",
+        "Pynput",
+        "Python Dotenv"
+      ],
+      "features": [
+        {
+          "name": "Limpeza de Arquivos Temporários",
+          "script": "clear_temp.py",
+          "description": "Remove arquivos temporários do sistema.",
+          "usage": "python src/automation/clear_temp.py"
+        },
+        {
+          "name": "Backup de Arquivos",
+          "script": "backup_cleaner.py",
+          "description": "Faz backup de arquivos e limpa diretórios.",
+          "usage": "python src/automation/backup_cleaner.py"
+        },
+        {
+          "name": "Envio de Logs por E-mail",
+          "script": "email_service.py",
+          "description": "Envia logs de execução para um e-mail.",
+          "usage": "python src/automation/email_service.py"
+        },
+        {
+          "name": "Instalação de Programas Essenciais",
+          "script": "install_basics.py",
+          "description": "Instala programas básicos como Google Chrome.",
+          "usage": "python src/automation/install_basics.py"
+        },
+        {
+          "name": "Chatbot",
+          "script": "chatbot.py",
+          "description": "Interface para interagir com o sistema de automação.",
+          "usage": "python src/automation/chatbot.py",
+          "commands": [
+            "Limpar meus arquivos temporários",
+            "Fazer backup",
+            "Enviar logs por e-mail",
+            "Instalar programas essenciais"
+          ]
+        }
+      ],
+      "logs": {
+        "description": "Armazenamento de registros detalhados das execuções dos scripts e interações com o chatbot.",
+        "common_files": [
+          "chatbot.log",
+          "clear_temp.log",
+          "backup_cleaner.log",
+          "email_service.log",
+          "install_basics.log"
+        ]
+      },
+      "actions": [
+        {
+          "command": "Limpar meus arquivos temporários",
+          "script": "clear_temp.py",
+          "description": "Remove arquivos temporários para liberar espaço e melhorar o desempenho."
+        },
+        {
+          "command": "Fazer backup",
+          "script": "backup_cleaner.py",
+          "description": "Faz backup de arquivos de um diretório para outro e limpa o diretório de origem."
+        },
+        {
+          "command": "Enviar logs por e-mail",
+          "script": "email_service.py",
+          "description": "Envia logs de execução de automações para um e-mail preconfigurado."
+        },
+        {
+          "command": "Instalar programas essenciais",
+          "script": "install_basics.py",
+          "description": "Instala programas como Google Chrome, se não estiverem instalados."
+        }
+      ]
+    },
+    "chatbot": {
+      "name": "Automation Helper Chatbot",
+      "commands": {
+        "clear_temp": {
+          "description": "Remove arquivos temporários do sistema.",
+          "action": "clear_temp.py",
+          "success_message": "Arquivos temporários limpos com sucesso!"
+        },
+        "backup_files": {
+          "description": "Faz backup de arquivos.",
+          "action": "backup_cleaner.py",
+          "success_message": "Backup realizado com sucesso!"
+        },
+        "send_logs": {
+          "description": "Envia logs por e-mail.",
+          "action": "email_service.py",
+          "success_message": "Logs enviados com sucesso!"
+        },
+        "install_programs": {
+          "description": "Instala programas essenciais.",
+          "action": "install_basics.py",
+          "success_message": "Programas essenciais instalados com sucesso!"
+        }
+      },
+      "exit_message": "Até logo! Se precisar de ajuda novamente, basta chamar o chatbot.",
+      "error_message": "Desculpe, algo deu errado. Tente novamente ou consulte os logs para mais detalhes."
+    }
+  }
+  
